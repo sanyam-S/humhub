@@ -10,8 +10,16 @@ permissions:
           owner: www-data
           group: www-data
 hooks:  
+        ApplicationStop:
+              - location: script/
+        
+        BeforeInstall:
+              - location: script/
         Install:         
               - location: script/script.sh
+              
+        AfterInstall: 
+              - location: script/
 
         ApplicationStart:
               - location: script/apache.sh
