@@ -11,28 +11,14 @@ permissions:
           group: www-data
 hooks:  
         ApplicationStop:
-<<<<<<< HEAD
               - location: script/Appstop.sh
 
         BeforeInstall:
               - location: script/beforeinstall.sh
 
-=======
-              - location: script/
-        
-        BeforeInstall:
-              - location: script/
->>>>>>> 82bca28aa6f03d5b57087ef8fd44e055852a3b32
         Install:         
               - location: script/script.sh
               
-        AfterInstall: 
-              - location: script/
-
-<<<<<<< HEAD
-        AfterInstall:
-=======
         ApplicationStart:
->>>>>>> 82bca28aa6f03d5b57087ef8fd44e055852a3b32
               - location: script/apache.sh
 
