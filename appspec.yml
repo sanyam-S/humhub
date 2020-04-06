@@ -1,4 +1,4 @@
-version: 0.0
+iersion: 0.0
 os: linux
 
 files:
@@ -11,19 +11,14 @@ permissions:
           group: www-data
 hooks:
         ApplicationStop:
-              - location: script/appstop.sh
+              - location: script/Appstop.sh
 
         BeforeInstall:
-              - location: script/preinstall.sh
+              - location: script/beforeinstall.sh
 
         Install:         
-              - location: script/install.sh
-
-        AfterInstall:
               - location: script/script.sh
 
-        ApplicationStart:
-              - location: script/appstart.sh
+        AfterInstall:
+              - location: script/apache.sh
 
-        ValidateService:
-              - location: 
