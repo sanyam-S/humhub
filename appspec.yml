@@ -15,11 +15,11 @@ hooks:
 
         BeforeInstall:
               - location: script/beforeinstall.sh
-                runas: ubuntu
+              
 
         Install:         
               - location: script/script.sh
-                runas: ubuntu
+              
               
         ApplicationStart:
               - location: script/apache.sh
