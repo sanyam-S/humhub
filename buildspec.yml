@@ -10,8 +10,13 @@ phases:
   build:
     commands:
       - composer install --no-progress --no-interaction 
-
-  artifacts:
+      
+  post_build:
+    commands:
+       - aws s3 cp s3://appspec/client1/appspec.yml .
+       - aws s3 cp s3://appspec/client1/scripts . --recursive
+   
+artifacts:
   files:
     - '**/*'
   name: humhub-$(date +%Y-%m-%d)
